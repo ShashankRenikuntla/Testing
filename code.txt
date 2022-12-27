@@ -1,0 +1,125 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+
+namespace projectSCALL
+{
+    class Program
+    {
+        private static object convert;
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(" choose from the above options");
+            Console.WriteLine("option 1 get student");
+            Console.WriteLine("option 2 get Teacher ");
+            Console.WriteLine("option 3 post student");
+            Console.WriteLine("option 4 post Teacher");
+            Console.WriteLine("option 5 Delete student");
+            Console.WriteLine("option 6 Delete Teacher");
+
+
+            List<Student> Studentlist = new List<Student>();
+            List<Teacher> Teacherlist = new List<Teacher>();
+
+            var option = Console.ReadLine();
+
+            if (option == "1")
+
+            {
+                bool isEmpty = !Studentlist.Any();
+                if (isEmpty)
+                {
+                    Console.WriteLine("There is no Data Present");
+
+                    
+            
+}
+                else
+
+                {
+                   // foreach (Student item in Studentlist)
+                      //  Console.WriteLine(item);
+                }
+
+
+            }
+
+            if (option == "2")
+            {
+                Student Test = new Student();
+                Console.WriteLine("Enter Student Name" );
+                Test.sutdName = Console.ReadLine();
+                Console.WriteLine("Enter Student ID");
+                Test.SutdID = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Student Number");
+                Test.sutdNUM = Convert.ToInt32(Console.ReadLine());
+
+                Studentlist.Append(Test);
+                foreach (Student item in Studentlist)
+                    Console.WriteLine(item);
+
+            }
+            if(option=="3")
+            {
+
+
+                Teacher test1 = new Teacher();
+                Console.WriteLine(" enter teacher name");
+                test1.teaName = Console.ReadLine();
+                Console.WriteLine("enter teacher ID");
+                test1.teaID = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter teacher number");
+                test1.teaNum = Convert.ToInt32(Console.ReadLine());
+                Teacherlist.Append(test1);
+
+                foreach (Teacher iteam in Teacherlist)
+                    Console.WriteLine(iteam);
+                Console.WriteLine("Enter other options");
+
+            }
+            if( option=="4")
+            {
+                Console.WriteLine("enter other option");
+                Student Test = new Student();
+                Console.WriteLine("Enter Student Name");
+                Test.sutdName = Console.ReadLine();
+                Console.WriteLine("Enter Student ID");
+                Test.SutdID = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter Student Number");
+                Test.sutdNUM = Convert.ToInt32(Console.ReadLine());
+
+                Studentlist.Append(Test);
+                foreach (Student item in Studentlist)
+                    Console.WriteLine(item);
+
+
+            }
+        }
+    }
+
+        public class Student
+        {
+            public String sutdName { get; set; }
+            public int SutdID { get; set; }
+
+            public int sutdNUM { get; set; }
+        }
+        public class Teacher
+        {
+         public String teaName { get; set; }
+        public int teaID { get; set; }
+        public int teaNum { get;set; }
+
+
+        }
+    }
+
+
+
+
+        
+    
+
